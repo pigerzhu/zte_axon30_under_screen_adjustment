@@ -229,6 +229,8 @@ public class AdjustmentService extends AccessibilityService {
             adjustmentLayoutParams.screenOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED;
             adjustmentLayoutParams.x = 0;
             adjustmentLayoutParams.y = 0;
+            adjustmentLayoutParams.width = 104;
+            adjustmentLayoutParams.height = 104;
         }
 
         if (notchLayoutParams == null) {
@@ -251,8 +253,8 @@ public class AdjustmentService extends AccessibilityService {
         switch (this.displayOrientation) {
             case PORTRAIT: {
                 adjustmentLayoutParams.gravity = Gravity.TOP;
-                adjustmentLayoutParams.width = 102;
-                adjustmentLayoutParams.height = 60;
+//                adjustmentLayoutParams.width = 102;
+//                adjustmentLayoutParams.height = 60;
                 notchLayoutParams.gravity = Gravity.TOP;
                 notchLayoutParams.width = 1080;
                 notchLayoutParams.height = 204;
@@ -260,8 +262,8 @@ public class AdjustmentService extends AccessibilityService {
             }
             case PORTRAIT_UPSIDE_DOWN: {
                 adjustmentLayoutParams.gravity = Gravity.BOTTOM;
-                adjustmentLayoutParams.width = 102;
-                adjustmentLayoutParams.height = 60;
+//                adjustmentLayoutParams.width = 102;
+//                adjustmentLayoutParams.height = 60;
                 notchLayoutParams.gravity = Gravity.BOTTOM;
                 notchLayoutParams.width = 1080;
                 notchLayoutParams.height = 204;
@@ -269,8 +271,8 @@ public class AdjustmentService extends AccessibilityService {
             }
             case LANDSCAPE_UPSIDE_LEFT: {
                 adjustmentLayoutParams.gravity = Gravity.LEFT;
-                adjustmentLayoutParams.width = 60;
-                adjustmentLayoutParams.height = 102;
+//                adjustmentLayoutParams.width = 60;
+//                adjustmentLayoutParams.height = 102;
                 notchLayoutParams.gravity = Gravity.LEFT;
                 notchLayoutParams.width = 204;
                 notchLayoutParams.height = 1080;
@@ -278,8 +280,8 @@ public class AdjustmentService extends AccessibilityService {
             }
             case LANDSCAPE_UPSIDE_RIGHT: {
                 adjustmentLayoutParams.gravity = Gravity.RIGHT;
-                adjustmentLayoutParams.width = 60;
-                adjustmentLayoutParams.height = 102;
+//                adjustmentLayoutParams.width = 60;
+//                adjustmentLayoutParams.height = 102;
                 notchLayoutParams.gravity = Gravity.RIGHT;
                 notchLayoutParams.width = 204;
                 notchLayoutParams.height = 1080;

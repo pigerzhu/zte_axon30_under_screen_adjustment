@@ -9,6 +9,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.net.Uri;
 
 import android.os.Bundle;
@@ -17,6 +21,9 @@ import android.provider.Settings;
 
 import android.util.Log;
 
+import android.view.DisplayCutout;
+import android.view.View;
+import android.view.WindowInsets;
 import android.view.accessibility.AccessibilityManager;
 
 import android.webkit.JavascriptInterface;
@@ -123,7 +130,7 @@ public class AdjustmentActivity extends Activity {
 
             String jsonString = array.toString();
 
-            String script = this.callbackAPI + "(" + error + ", " + jsonString.substring(1, jsonString.length() - 1)+ ")";
+            String script = this.callbackAPI + "(" + error + ", " + jsonString.substring(1, jsonString.length() - 1) + ")";
 
             AdjustmentActivity.this.evaluateJavaScript(script);
 
@@ -173,6 +180,23 @@ public class AdjustmentActivity extends Activity {
 
         this.showAdjustmentOverlay(true);
 
+        getWindow().getDecorView().setOnApplyWindowInsetsListener((v, insets) -> {
+            //用这里的View判断刘海状态
+            DisplayCutout cutout = v.getRootWindowInsets().getDisplayCutout();
+            Log.d("cutout", "cutout: " + cutout);
+            getWindow().getDecorView().setOnApplyWindowInsetsListener(null);
+            // width 104   height: 104
+            Rect rect = new Rect(488, 0, 592, 104);
+//            Rect(488, 0 - 592, 104)
+            Canvas canvas = new Canvas();
+            Paint paint = new Paint();
+            paint.setColor(Color.BLACK);
+            canvas.drawRect(rect,paint);
+            v.draw(canvas);
+            return v.onApplyWindowInsets(insets);
+
+        });
+
     }
 
     @Override
@@ -190,7 +214,9 @@ public class AdjustmentActivity extends Activity {
                 }
                 break;
             }
-            default: { break; }
+            default: {
+                break;
+            }
         }
 
         this.showAdjustmentOverlay(true);
@@ -264,12 +290,12 @@ public class AdjustmentActivity extends Activity {
             boolean update;
             try {
                 JSONArray arguments = parameters.getJSONArray("arguments");
-                r = (float)arguments.getDouble(0);
-                g = (float)arguments.getDouble(1);
-                b = (float)arguments.getDouble(2);
-                a = (float)arguments.getDouble(3);
-                notch = (float)arguments.getDouble(4);
-                update = (boolean)arguments.getBoolean(5);
+                r = (float) arguments.getDouble(0);
+                g = (float) arguments.getDouble(1);
+                b = (float) arguments.getDouble(2);
+                a = (float) arguments.getDouble(3);
+                notch = (float) arguments.getDouble(4);
+                update = (boolean) arguments.getBoolean(5);
             } catch (JSONException exception) {
                 callback.response(ERROR_JSON_ERROR);
                 return;
