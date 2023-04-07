@@ -28,7 +28,7 @@ html, body {
 
 #sample-hole {
     position: fixed;
-    top: 3.5px;
+    top: 35px;
     left: 50%;
     margin-left: -15px;
     width: 30px;
