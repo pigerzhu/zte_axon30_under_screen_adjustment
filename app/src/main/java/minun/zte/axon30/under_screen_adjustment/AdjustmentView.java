@@ -50,7 +50,7 @@ public class AdjustmentView extends View {
 //        canvas.drawCircle(
 //                (float) (104 / 2.0),
 //                (float) (104 / 2.0),
-//                (float) (88 / 2.0),
+//                (float) (30/ 2.0),
 //                this.paint);
 //    }
 
