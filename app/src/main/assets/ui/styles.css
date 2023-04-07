@@ -30,9 +30,9 @@ html, body {
     position: fixed;
     top: 3.5px;
     left: 50%;
-    margin-left: -15px;
-    width: 15px;
-    height: 15px;
+    margin-left: -5px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border-style: hidden;
     background-color: #ff000088;
