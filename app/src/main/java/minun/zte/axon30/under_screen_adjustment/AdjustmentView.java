@@ -32,27 +32,27 @@ public class AdjustmentView extends View {
         setClipToOutline(true);
     }
 
-//    @Override
-//    protected void onDraw(Canvas canvas) {
-//        super.onDraw(canvas);
-////        canvas.drawRect(rect,paint);
-////        this.setBackgroundColor(Color.GRAY);
-////        this.paint.setColor(Color.WHITE);
-////        this.paint.setAlpha(30);
-////        this.paint.setStyle(Paint.Style.FILL);//画笔属性是空心圆
-////        paint.setStrokeWidth(10);//设置画笔粗细
-////               /*四个参数：
-////                参数一：圆心的x坐标
-////                参数二：圆心的y坐标
-////                参数三：圆的半径
-////                参数四：定义好的画笔
-////                */
-//        canvas.drawCircle(
-//                (float) (104 / 2.0),
-//                (float) (104 / 2.0),
-//                (float) (10 / 2.0),
-//                this.paint);
-//    }
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        canvas.drawRect(rect,paint);
+        this.setBackgroundColor(Color.GRAY);
+        this.paint.setColor(Color.WHITE);
+        this.paint.setAlpha(30);
+        this.paint.setStyle(Paint.Style.FILL);//画笔属性是空心圆
+        paint.setStrokeWidth(10);//设置画笔粗细
+               /*四个参数：
+                参数一：圆心的x坐标
+                参数二：圆心的y坐标
+                参数三：圆的半径
+                参数四：定义好的画笔
+                */
+        canvas.drawCircle(
+                (float) (104 / 2.0),
+                (float) (104 / 2.0),
+                (float) (10 / 2.0),
+                this.paint);
+    }
 
     public void setAdjustment(float r, float g, float b, float a) {
         this.setBackgroundColor(Color.argb(a, r, g, b));
