@@ -26,7 +26,7 @@ public class AdjustmentView extends View {
             public void getOutline(View view, Outline outline) {
                 Rect rect = new Rect(7, 7, 90+7, 90+7);
                 Log.d("AdjustmentView", "rect: "+ rect);
-                outline.setRoundRect(rect, 20);
+                outline.setRoundRect(rect, 5);
             }
         });
         setClipToOutline(true);
@@ -50,7 +50,7 @@ public class AdjustmentView extends View {
 //        canvas.drawCircle(
 //                (float) (104 / 2.0),
 //                (float) (104 / 2.0),
-//                (float) (40 / 2.0),
+//                (float) (10 / 2.0),
 //                this.paint);
 //    }
 
