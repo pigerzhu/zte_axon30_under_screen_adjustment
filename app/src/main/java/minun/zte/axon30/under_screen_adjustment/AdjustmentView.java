@@ -26,7 +26,7 @@ public class AdjustmentView extends View {
             public void getOutline(View view, Outline outline) {
                 Rect rect = new Rect(20, 20, 200, 200);
                 Log.d("AdjustmentView", "rect: "+ rect);
-                outline.setRoundRect(rect, 5);
+                outline.setRoundRect(rect, 45);
             }
         });
         setClipToOutline(true);
