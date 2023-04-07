@@ -186,7 +186,7 @@ public class AdjustmentActivity extends Activity {
             Log.d("cutout", "cutout: " + cutout);
             getWindow().getDecorView().setOnApplyWindowInsetsListener(null);
             // width 104   height: 104
-            Rect rect = new Rect(488, 0, 592, 104);
+            Rect rect = new Rect(489, 1, 591, 103);
 //            Rect(488, 0 - 592, 104)
             Canvas canvas = new Canvas();
             Paint paint = new Paint();
