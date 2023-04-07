@@ -28,11 +28,11 @@ html, body {
 
 #sample-hole {
     position: fixed;
-    top: 2.5px;
+    top: 6.5px;
     left: 50%;
     margin-left: -15px;
-    width: 31px;
-    height: 31px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     border-style: hidden;
     background-color: #ff000088;
