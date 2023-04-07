@@ -14,19 +14,19 @@ import android.view.ViewOutlineProvider;
 
 public class AdjustmentView extends View {
 
-//    Paint paint;
+    Paint paint;
 
     public AdjustmentView(Context context) {
         super(context);
         this.setBackgroundColor(Color.TRANSPARENT);
-//        this.paint = new Paint();
-//        this.paint.setAlpha(100);
+        this.paint = new Paint();
+        this.paint.setAlpha(100);
         setOutlineProvider(new ViewOutlineProvider() {
             @Override
             public void getOutline(View view, Outline outline) {
                 Rect rect = new Rect(7, 7, 90+7, 90+7);
                 Log.d("AdjustmentView", "rect: "+ rect);
-                outline.setRoundRect(rect, 5);
+                outline.setRoundRect(rect, 45);
             }
         });
         setClipToOutline(true);
