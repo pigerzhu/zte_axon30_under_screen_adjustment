@@ -229,8 +229,8 @@ public class AdjustmentService extends AccessibilityService {
             adjustmentLayoutParams.screenOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED;
             adjustmentLayoutParams.x = 0;
             adjustmentLayoutParams.y = 0;
-            adjustmentLayoutParams.width = 104;
-            adjustmentLayoutParams.height = 104;
+            adjustmentLayoutParams.width = 103;
+            adjustmentLayoutParams.height = 103;
         }
 
         if (notchLayoutParams == null) {
