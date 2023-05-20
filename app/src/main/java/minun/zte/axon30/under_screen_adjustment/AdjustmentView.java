@@ -24,7 +24,7 @@ public class AdjustmentView extends View {
         setOutlineProvider(new ViewOutlineProvider() {
             @Override
             public void getOutline(View view, Outline outline) {
-                Rect rect = new Rect(8,10,92,94);
+                Rect rect = new Rect(10,10,92,92);
                 Log.d("AdjustmentView", "rect: "+ rect);
                 outline.setRoundRect(rect, 45);
             }
